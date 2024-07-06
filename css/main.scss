@@ -40,8 +40,17 @@ li {
     display: flex;
     align-items: center;
     gap: 50px;
+    @media (max-width: 760px) {
+      display: none;
+    }
     a {
       color: rgb(177, 218, 238);
+    }
+    .burger {
+      display: none;
+      @media (max-width: 760px) {
+        display: block;
+      }
     }
   }
 }
@@ -54,6 +63,9 @@ li {
   background: rgb(5, 55, 55);
   transition: 1.1;
   color: white;
+  @media (max-width: 760px) {
+    display: none;
+  }
   &:hover {
     cursor: pointer;
     background: rgba(30, 143, 255, 0.658);
@@ -63,12 +75,22 @@ li {
 .background__bg {
   width: 100%;
   background: rgb(5, 55, 72);
-  height: 920px;
+  // height: 920px;
   .hero {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    @media (max-width: 925px) {
+      img {
+        width: 100%;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 50px;
+    }
     .hero__box {
       display: flex;
       // align-items: center;
@@ -92,6 +114,9 @@ li {
       b {
         font-size: 64px;
         color: white;
+        @media (max-width: 1085px) {
+          font-size: 24px;
+        }
       }
       p {
         font-size: 18px;
@@ -118,7 +143,7 @@ li {
         }
       }
     }
-    margin-bottom: 500px;
+    margin-bottom: 200px;
   }
 }
 .half__box {
@@ -133,6 +158,19 @@ li {
   background: white;
   border-radius: 15px;
   box-shadow: 0px 10px 100px 10px rgba(0, 0, 0, 0.603);
+  @media (max-width: 925px) {
+    width: 100%;
+    // height: 323px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0px;
+    gap: 80px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 100px 10px rgba(0, 0, 0, 0.603);
+  }
   h2 {
     color: rgb(42, 54, 90);
     font-size: 36px;
@@ -143,6 +181,15 @@ li {
     align-items: center;
     justify-content: space-around;
     margin-bottom: 40px;
+    @media (max-width:610px) {
+       width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    gap: 10px;
+    flex-direction: column;
+    }
     .half__card {
       display: flex;
       align-items: center;
@@ -171,6 +218,14 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 780px) {
+      margin-top: 25px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+    }
     .card__box {
       width: 275px;
       height: 250px;
@@ -257,11 +312,29 @@ li {
     display: flex;
     align-items: center;
     padding: 102px 0;
+    @media (max-width: 850px) {
+      display: flex;
+      align-items: center;
+      padding: 102px 0;
+      flex-direction: column;
+    }
+    .human {
+      @media (max-width: 641px) {
+        display: none;
+      }
+    }
     .human__text {
       display: flex;
       justify-content: center;
       gap: 15px;
       flex-direction: column;
+      @media (max-width: 850px) {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-direction: column;
+        padding: 20px;
+      }
       p {
         color: white;
         font-size: 16px;
@@ -282,6 +355,14 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 641px) {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+  }
   .footer__star {
     width: 25%;
 
