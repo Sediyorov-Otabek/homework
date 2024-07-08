@@ -416,8 +416,14 @@ li {
 .titlee {
   font-size: 18vh;
   color: #fff;
+  @media (max-width: 900px) {
+    font-size: 10vh;
+  }
+  @media (max-width: 510px) {
+    font-size: 5vh;
+  }
 }
-.btn {
+.btnn {
   padding: 8px 30px;
   border: none;
   border-radius: 20px;
