@@ -19,6 +19,7 @@ a {
 li {
   list-style: none;
 }
+
 .header {
   width: 100%;
   background: #1b0808ab;
@@ -27,6 +28,29 @@ li {
   left: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
+}
+.sidebar {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  background: greenyellow;
+  z-index: 1111;
+  display: flex;
+  justify-content: center;
+  line-height: 1.5;
+  padding-top: 30px;
+  @media (max-width: 370px) {
+    width: 200px;
+  }
+}
+.sidebar.show {
+  left: 0;
+}
+.ends {
+  display: flex;
+  flex-direction: column;
 }
 
 .nav {
@@ -181,14 +205,14 @@ li {
     align-items: center;
     justify-content: space-around;
     margin-bottom: 40px;
-    @media (max-width:610px) {
-       width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 40px;
-    gap: 10px;
-    flex-direction: column;
+    @media (max-width: 610px) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 40px;
+      gap: 10px;
+      flex-direction: column;
     }
     .half__card {
       display: flex;
@@ -377,4 +401,28 @@ li {
       color: greenyellow;
     }
   }
+}
+.box {
+  margin-top: 100px;
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.titlee {
+  font-size: 18vh;
+  color: #fff;
+}
+.btn {
+  padding: 8px 30px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 3vh;
+  background: rgba(0, 0, 139, 0.788);
+  color: #fff;
 }
